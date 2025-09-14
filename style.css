@@ -1,1 +1,262 @@
-/* Add your CSS here */
+/* Remove default margin and set a modern, readable font */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #eaf6fb; /* Subtle background for the whole page */
+}
+
+/* Header with a modern Intel blue gradient background */
+header {
+  background: linear-gradient(120deg, #1686c1 0%, #0b6ab3 100%);
+  padding: 64px 0 56px 0; /* More space for a modern look */
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(22,134,193,0.10); /* Soft shadow for depth */
+}
+
+/* Center the logo and remove background from its container */
+#header-logo {
+  background: none;
+  padding: 0;
+  margin: 0 auto 28px auto;
+  display: block;
+  text-align: center;
+}
+
+/* Make the logo image bigger and more visible */
+#header-logo img {
+  width: 180px;
+  height: auto;
+  display: block;
+  margin: 0 auto 28px auto;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.10)); /* Soft shadow for visibility */
+}
+
+/* Main heading styles - bold, modern, and uppercase */
+h1 {
+  color: #fff;
+  font-size: 2.8em;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin: 0 0 22px 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  text-transform: uppercase;
+  line-height: 1.1;
+  display: block;
+  text-shadow: 0 2px 8px rgba(22,134,193,0.10); /* Subtle text shadow */
+}
+
+/* Blue underline below heading - modern and centered */
+.header-underline {
+  width: 90px;
+  height: 4px;
+  background: #04C7FD;
+  margin: 0 auto 32px auto;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(4,199,253,0.10);
+}
+
+/* Style the subheading/description */
+header p {
+  color: #e3f2fd;
+  font-size: 1.22em;
+  margin: 0 auto;
+  max-width: 650px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.5;
+  text-shadow: 0 1px 4px rgba(22,134,193,0.08);
+}
+
+/* Timeline cards container - improved width for large screens */
+section {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 40px;
+  width: 73%;                
+  max-width: 1400px;           /* But never exceed 1400px */
+  margin: 0 auto;
+  padding: 50px 50px 50px 30px;
+  background: #f4faff;
+  scroll-behavior: smooth;
+  align-items: flex-start;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(22,134,193,0.08);
+  scroll-snap-type: x mandatory;
+}
+
+/* Individual card styles - modern, larger, and more readable */
+.timeline-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(22,134,193,0.14);
+  width: 360px;
+  flex: 0 0 360px;
+  padding: 36px 24px 28px 24px;
+  text-align: center;
+  position: relative;
+  transition:
+    transform 0.5s cubic-bezier(.4,2,.6,1),
+    box-shadow 0.5s cubic-bezier(.4,2,.6,1);
+  cursor: pointer;
+  overflow: hidden;
+  min-height: 440px;
+  will-change: transform;
+  scroll-snap-align: start;
+  outline: none;
+  /* Add tabindex for accessibility in HTML (see below) */
+}
+
+/* Card image - larger, rounded, and with a soft shadow */
+.card-img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  transition: transform 0.5s;
+  box-shadow: 0 2px 12px rgba(22,134,193,0.10);
+}
+
+/* Hide the <p> by default */
+.timeline-card p {
+  opacity: 0;
+  max-height: 0;
+  transition: opacity 0.7s, max-height 0.7s, padding 0.7s;
+  margin: 0;
+  color: #1686c1;
+  font-size: 1.12em;
+  background: #e6f7ff;
+  border-radius: 10px;
+  padding: 0 12px;
+  box-shadow: 0 2px 8px rgba(22,134,193,0.06);
+}
+
+/* Show <p> on hover/focus with a cool effect */
+.timeline-card:hover,
+.timeline-card:focus-within {
+  transform: translateY(-14px) scale(1.045);
+  box-shadow: 0 16px 48px rgba(22,134,193,0.22);
+}
+
+.timeline-card:hover .card-img,
+.timeline-card:focus-within .card-img {
+  transform: scale(1.07) rotate(-1deg);
+}
+
+.timeline-card:hover p,
+.timeline-card:focus-within p {
+  opacity: 1;
+  max-height: 240px;
+  margin-top: 20px;
+  padding: 18px 12px;
+}
+
+/* Make h2 and h3 stand out - larger and more modern */
+.timeline-card h2 {
+  color: #127CC1;
+  font-size: 1.8em;
+  margin: 16px 0 6px 0;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.timeline-card h3 {
+  color: #222;
+  font-size: 1.22em;
+  margin: 0 0 12px 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Optional: Add a visible focus style for accessibility */
+.timeline-card:focus {
+  outline: 2px solid #04C7FD;
+  outline-offset: 2px;
+}
+
+/* Style the footer info text for visibility */
+.footer-info {
+  background: #127CC1;
+  color: #fff;
+  text-align: center;
+  padding: 14px 0;
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
+  margin: 0;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 2px 8px rgba(22,134,193,0.08);
+}
+
+/* Responsive: stack cards vertically on tablets and phones, keep them large */
+@media (max-width: 1300px) {
+  section {
+    width: 100vw;
+    min-width: 0;
+    max-width: 100vw;
+    padding: 32px 0 48px 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    overflow-x: visible;
+    scroll-snap-type: none;
+    border-radius: 0;
+  }
+  .timeline-card {
+    width: 96vw;
+    min-width: 0;
+    max-width: 440px;
+    min-height: 0;
+    flex: 1 1 auto;
+    scroll-snap-align: none;
+  }
+  .card-img {
+    height: 180px;
+  }
+}
+
+/* Responsive: make text and images a bit smaller on very small screens */
+@media (max-width: 600px) {
+  header {
+    padding: 36px 0 24px 0;
+  }
+  h1 {
+    font-size: 1.5em;
+    margin-bottom: 14px;
+  }
+  .header-underline {
+    width: 48px;
+    height: 3px;
+    margin-bottom: 18px;
+  }
+  header p {
+    font-size: 1em;
+    max-width: 98vw;
+    padding: 0 8px;
+  }
+  section {
+    padding: 12px 0 24px 0;
+    gap: 18px;
+  }
+  .timeline-card {
+    padding: 10px 2vw 10px 2vw;
+    width: 92vw;           /* Make card a bit smaller than full width */
+    max-width: 92vw;
+    min-height: 0;
+    margin: 10px 0;        /* Add vertical space between cards */
+    border-radius: 14px;   /* Keep rounded corners */
+  }
+  .card-img {
+    height: 110px;
+  }
+  .timeline-card h2 {
+    font-size: 1.1em;
+  }
+  .timeline-card h3 {
+    font-size: 1em;
+  }
+}
+
+/* Add smooth scroll for all scrollable elements */
+html {
+  scroll-behavior: smooth;
+}
