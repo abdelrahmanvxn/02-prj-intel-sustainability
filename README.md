@@ -1,4 +1,33 @@
-# Project 2: Intel Sustainability Journey
-Build an interactive webpage that presents Intel's sustainability goals in a timeline format. Using AI and your knowledge of responsive design, you'll experiment with hover effects, transitions, and layouts to ensure it adapts seamlessly to both desktop and mobile.
+# 🌍 Intel Sustainability Timeline
 
-Launch a Codespace to get started! Remember to Commit and Push your project changes to GitHub from Codespaces to prevent losing progress.
+An interactive, responsive webpage built as part of my **Web Development class project**.  
+The site highlights **Intel’s key sustainability milestones** from 1968 through 2024 in a **timeline format**.
+
+---
+
+## ✨ Features
+- **Responsive Timeline**  
+  - Horizontal scroll with snap on large screens  
+  - Vertical stacking on tablets & mobile  
+
+- **Interactive Milestone Cards**  
+  - Additional details are hidden by default  
+  - Smoothly revealed on hover/focus  
+
+- **Modern Styling**  
+  - Inspired by Intel branding (blue gradient, bold typography, subtle shadows)  
+  - Rounded cards, hover effects, and polished layout  
+
+- **Images for Each Milestone**  
+  - All 9 timeline cards include milestone-specific images  
+
+- **LevelUp Additions**  
+  - CSS transforms: scale, lift, and rotate effects on hover  
+  - Scroll snap for a smooth desktop timeline experience  
+
+---
+
+## 🛠️ Tech Stack
+- **HTML5** for structure  
+- **CSS3** with Flexbox for layout and responsiveness  
+- **GitHub Pages** (optional) for deployment  
